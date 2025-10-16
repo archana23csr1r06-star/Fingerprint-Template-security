@@ -50,7 +50,7 @@ Clone this repository to your local machine.
 
 Navigate to the directory containing the Jupyter notebooks.
 
-Open the desired notebook (e.g., ConvexNet_BiGRU_loading_with_Cross_sensor_with_patchsize_16x16.ipynb).
+Open the desired notebook (e.g.,Fingerprint-Template-security.ipynb).
 
 Execute the notebook cells to run the model training and evaluation.
 
