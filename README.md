@@ -56,3 +56,11 @@ Execute the notebook cells to run the model training and evaluation.
 
 # Methodology
 
+The proposed method employs a Hilbert transform-based phase encoding to embed a secret phase key, ensuring non-invertibility, revocability, and unlinkability.
+Experiments on FVC2002 and FVC2004 datasets confirm that PKBT maintains high recognition accuracy while securing templates.
+Security and adversarial analyses further demonstrate PKBT’s robustness against biometric guessing and reconstruction attacks.
+
+# Results
+
+The results of the experiments are documented in the respective notebooks. They include performance metrics such as accuracy, ROC, EER. 
+
