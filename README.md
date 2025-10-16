@@ -1,1 +1,4 @@
 # Fingerprint-Template-security
+===
+Overview:
+The transformation is designed to balance security and usability in biometric systems. By preserving the inherent distinctiveness of each user’s biometric traits, it ensures accurate recognition and matching. At the same time, the transformation secures the template representations such that any attempt to reconstruct the original biometric data from the transformed templates becomes computationally infeasible. This dual property guarantees that the system remains robust against attacks aimed at stealing or reverse-engineering sensitive biometric information, while maintaining reliable authentication performance.
