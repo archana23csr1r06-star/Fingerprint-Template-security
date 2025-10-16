@@ -54,3 +54,5 @@ Open the desired notebook (e.g.,Fingerprint-Template-security.ipynb).
 
 Execute the notebook cells to run the model training and evaluation.
 
+# Methodology
+
