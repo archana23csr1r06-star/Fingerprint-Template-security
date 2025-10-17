@@ -66,49 +66,99 @@ Execute the notebook cells to run the model training and evaluation.
   
 </details>
 
-
 ### Dataset
+
 <details>
   <summary><strong>Description of Proposed Work</strong></summary>
+  
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-The datasets used in the experiments are publicly available and can be accessed via the following link:
-
-FVC2002,FVC2004:http://bias.csr.unibo.it/fvc2002/databases.asp
-
-FVC2002 DB1 Optical Sensor 
-FVC2002 DB2 Optical Sensor 
-FVC2002 DB3 Capacitive Sensor 
-FVC2002 DB4 SFinGe v2.51 
-FVC2004 DB1 Optical Sensor 
-FVC2004 DB2 Optical Sensor 
-FVC2004 DB3 Thermal sensor 
-FVC2004 DB4 SFinGe v3.0 
- </div>
+    The datasets used in the experiments are publicly available and can be accessed via the following link:
+    
+    [FVC2002, FVC2004](http://bias.csr.unibo.it/fvc2002/databases.asp)
+    
+    - **FVC2002 DB1**: Optical Sensor  
+    - **FVC2002 DB2**: Optical Sensor  
+    - **FVC2002 DB3**: Capacitive Sensor  
+    - **FVC2002 DB4**: SFinGe v2.51  
+    - **FVC2004 DB1**: Optical Sensor  
+    - **FVC2004 DB2**: Optical Sensor  
+    - **FVC2004 DB3**: Thermal sensor  
+    - **FVC2004 DB4**: SFinGe v3.0  
+  </div>
   
 </details>
 
-# Feature Extraction Using MobileNet:
+### Feature Extraction Using MobileNet:
 
-A lightweight deep learning model, MobileNet, is used for extracting biometric features from fingerprint images. These features are then used for transformation and classification. The extracted features represent critical fingerprint patterns like ridges and minutiae.
+<details>
+  <summary><strong>Click to view description</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    A lightweight deep learning model, **MobileNet**, is used for extracting biometric features from fingerprint images. These features are then used for transformation and classification. The extracted features represent critical fingerprint patterns like ridges and minutiae.
+  </div>
+  
+</details>
 
-# Hilbert Transform for Analytic Feature Space:
+### Hilbert Transform for Analytic Feature Space:
 
-The Hilbert transform is applied to the extracted fingerprint features to generate an analytic feature space. This transform creates a complex representation of the original features by separating magnitude and phase components.
+<details>
+  <summary><strong>Click to view description</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    The **Hilbert transform** is applied to the extracted fingerprint features to generate an **analytic feature space**. This transform creates a complex representation of the original features by separating magnitude and phase components.
+  </div>
+  
+</details>
 
-# Phase Modulation with a Secret Key:
+### Phase Modulation with a Secret Key:
 
-The phase component of the analytic features is modulated using a secret phase key. This key-dependent modulation ensures that the transformation is non-invertible, making it computationally infeasible to recover the original fingerprint features without the key.The transformed features are reconstructed by combining the original magnitude with the modulated phase. The final transformed feature, a real-valued vector, incorporates both the original biometric information (via magnitude) and enhanced security (via phase modulation).
+<details>
+  <summary><strong>Click to view description</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    The **phase component** of the analytic features is modulated using a **secret phase key**. This key-dependent modulation ensures that the transformation is **non-invertible**, making it computationally infeasible to recover the original fingerprint features without the key. The transformed features are reconstructed by combining the original magnitude with the modulated phase. The final transformed feature, a real-valued vector, incorporates both the original biometric information (via magnitude) and enhanced security (via phase modulation).
+  </div>
+  
+</details>
 
-# Classification and Verification
-Task:1- A Dense Neural Network classifier is employed to classify both original and transformed features. The network consists of multiple fully connected layers with batch normalization, dropout, and L2 regularization to prevent overfitting and improve classification accuracy.Mahalanobis Distance for verification purpose
+### Classification and Verification
 
-Task:2- Verification using Mahalobis Distance for Real and Query fingerprint
+**Task 1**: A **Dense Neural Network** classifier is employed to classify both original and transformed features. The network consists of multiple fully connected layers with **batch normalization**, **dropout**, and **L2 regularization** to prevent overfitting and improve classification accuracy.
 
-# HillClimbing Attack testing
-*Score-Oracle :  It provides a continuous similarity score (higher values indicate a closer match) between the target feature and a generated feature during an attack. The goal is to find a synthetic feature that is as similar as possible to the original target template.
-*Binary-Oracle : It gives a binary decision — match or no-match — based on whether the generated feature is accepted as matching the target feature.
+**Task 2**: Verification using **Mahalanobis Distance** for Real and Query fingerprint.
 
-# Results
+<details>
+  <summary><strong>Click to view details on Classification & Verification</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    Task 1: The **Dense Neural Network** classifier processes both the original and transformed feature vectors. This helps in classifying fingerprints into genuine or altered categories with high accuracy. The network's structure includes fully connected layers that allow it to learn complex patterns in the data, and batch normalization and dropout are applied to reduce overfitting.
+    
+    Task 2: **Mahalanobis Distance** is used to verify whether the **real fingerprint** and **query fingerprint** match. It compares the feature vectors and ensures that the system accurately distinguishes between genuine and forged fingerprints.
+  </div>
+  
+</details>
 
-The results of the experiments are documented in the respective notebooks. They include performance metrics such as accuracy, ROC, EER. 
+### HillClimbing Attack Testing
+
+<details>
+  <summary><strong>Click to view details on HillClimbing Attack Testing</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    **Score-Oracle**: It provides a continuous similarity score (higher values indicate a closer match) between the target feature and a generated feature during an attack. The goal is to find a synthetic feature that is as similar as possible to the original target template.
+    
+    **Binary-Oracle**: It gives a binary decision — **match** or **no-match** — based on whether the generated feature is accepted as matching the target feature.
+  </div>
+  
+</details>
+
+### Results
+
+<details>
+  <summary><strong>Click to view results</strong></summary>
+  
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
+    The results of the experiments are documented in the respective notebooks. They include performance metrics such as **accuracy**, **ROC**, and **EER**.
+  </div>
+  
+</details>
 
