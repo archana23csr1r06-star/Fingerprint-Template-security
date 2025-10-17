@@ -1,3 +1,24 @@
+# Cryptographic Fingerprint Template Protection Using Phase-Keyed Biometric Transformation
+# Manuscript ID: IEEE LAT AM T Submission ID: Paper ID: 9716
+
+Authors:
+• Archana Pallakonda
+• R Padmavathy
+
+# Included Scripts
+This repository contains all scripts required to reproduce the simulation and numerical results presented in the article.
+| Source code | Figure/Table | description |
+| --- | --- |
+| FVC200220024-classification.ipynb| Figs. Accuracy, Loss, EER are the resultant plots |Interactive python notebook having python code developed for the Classification Task |
+| FVC-Verification.ipynb | Figs. ROC, DET are the resultant plots| Interactive python notebook having python code developed for the Verification Task |
+| genuine and imposter.ipynb | Figs. Genuine and Imposter Score distribution, FRR/FAR, ROC are the resultant plots| Interactive python notebook having python code developed for Calculating Genuine and Imposter Scores |
+| hill climbing attack.ipynb | Figs. ROC,Scorce Oracle, Binary Oracle are the resultant plots | Interactive python notebook having python code developed for the Hill climbing ttack testing  |
+
+
+# Requirements:
+• Python / Jupyter notebook
+• gitbash terminal
+
 # Fingerprint-Template-security
 
 The transformation is designed to balance security and usability in biometric systems. By preserving the inherent distinctiveness of each user’s biometric traits, it ensures accurate recognition and matching. At the same time, the transformation secures the template representations such that any attempt to reconstruct the original biometric data from the transformed templates becomes computationally infeasible. This dual property guarantees that the system remains robust against attacks aimed at stealing or reverse-engineering sensitive biometric information, while maintaining reliable authentication performance.
