@@ -54,8 +54,15 @@ Execute the notebook cells to run the model training and evaluation.
 
 # The following work flow 
 
-# Description of proposed work
-The proposed methodology, Phase-Keyed Biometric Transformation (PKBT), is a novel fingerprint template protection technique that enhances biometric security. It integrates a Hilbert transform-based phase encoding method to embed a secret phase key into extracted fingerprint features. This transformation ensures non-invertibility by altering the phase of the biometric features while preserving their magnitude, which maintains their distinctiveness for recognition.The PKBT technique introduces a secret key modulation that prevents unauthorized reconstruction of the original fingerprint data. Additionally, the framework supports revocability and unlinkability.
+<details>
+  <summary><strong>Description of Proposed Work</strong></summary>
+  
+  The proposed methodology, **Phase-Keyed Biometric Transformation (PKBT)**, is a novel fingerprint template protection technique that enhances biometric security. It integrates a **Hilbert transform-based phase encoding** method to embed a secret phase key into extracted fingerprint features. This transformation ensures **non-invertibility** by altering the phase of the biometric features while preserving their magnitude, which maintains their distinctiveness for recognition.
+
+  The **PKBT** technique introduces a secret key modulation that prevents unauthorized reconstruction of the original fingerprint data. Additionally, the framework supports **revocability** and **unlinkability**.
+  
+</details>
+
 
 # Dataset
 
