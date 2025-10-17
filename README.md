@@ -11,11 +11,11 @@ This repository contains all scripts required to reproduce the simulation and nu
 
 | Source code | Figure/Table | Description |
 |--------------|---------------|--------------|
-| **FVC200220024-classification.ipynb** | Figs. Accuracy, Loss, EER are the resultant plots | Interactive Python notebook containing code for the **Classification Task** |
-| **FVC-Verification.ipynb** | Figs. ROC, DET are the resultant plots | Interactive Python notebook containing code for the **Verification Task** |
-| **genuine and imposter.ipynb** | Figs. Genuine and Imposter Score Distribution, FRR/FAR, ROC are the resultant plots | Interactive Python notebook containing code for **Calculating Genuine and Imposter Scores** |
-| **hill climbing attack.ipynb** | Figs. ROC, Score Oracle, Binary Oracle are the resultant plots | Interactive Python notebook containing code for **Hill-Climbing Attack Testing** |
-| **record multiplicity + oracle attack.ipynb** | Figs. ROC, DET are the resultant plots with AUC = 0.9997 and EER = 0.0115 | Interactive Python notebook containing code for **Record Multiplicity + Oracle Attack Evaluation** using ISO/IEC-style metrics |
+| FVC200220024-classification.ipynb | Figs. Accuracy, Loss, EER are the resultant plots | Interactive Python notebook containing code for the **Classification Task** |
+| FVC-Verification.ipynb | Figs. ROC, DET are the resultant plots | Interactive Python notebook containing code for the **Verification Task** |
+| genuine and imposter.ipynb | Figs. Genuine and Imposter Score Distribution, FRR/FAR, ROC are the resultant plots | Interactive Python notebook containing code for **Calculating Genuine and Imposter Scores** |
+| hill climbing attack.ipynb | Figs. ROC, Score Oracle, Binary Oracle are the resultant plots | Interactive Python notebook containing code for **Hill-Climbing Attack Testing** |
+| record multiplicity + oracle attack.ipynb | Figs. ROC, DET are the resultant plots with AUC = 0.9997 and EER = 0.0115 | Interactive Python notebook containing code for **Record Multiplicity + Oracle Attack Evaluation** using ISO/IEC-style metrics |
 
 
 # Requirements:
@@ -59,9 +59,9 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Description of Proposed Work</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    The proposed methodology, **Phase-Keyed Biometric Transformation (PKBT)**, is a novel fingerprint template protection technique that enhances biometric security. It integrates a **Hilbert transform-based phase encoding** method to embed a secret phase key into extracted fingerprint features. This transformation ensures **non-invertibility** by altering the phase of the biometric features while preserving their magnitude, which maintains their distinctiveness for recognition.
+    The proposed methodology, Phase-Keyed Biometric Transformation (PKBT), is a novel fingerprint template protection technique that enhances biometric security. It integrates a Hilbert transform-based phase encoding method to embed a secret phase key into extracted fingerprint features. This transformation ensures **non-invertibility** by altering the phase of the biometric features while preserving their magnitude, which maintains their distinctiveness for recognition.
 
-  The **PKBT** technique introduces a secret key modulation that prevents unauthorized reconstruction of the original fingerprint data. Additionally, the framework supports **revocability** and **unlinkability**.
+  The PKBT technique introduces a secret key modulation that prevents unauthorized reconstruction of the original fingerprint data. Additionally, the framework supports revocability and unlinkability.
   </div>
   
 </details>
@@ -94,7 +94,7 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Click to view description</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    A lightweight deep learning model, **MobileNet**, is used for extracting biometric features from fingerprint images. These features are then used for transformation and classification. The extracted features represent critical fingerprint patterns like ridges and minutiae.
+    A lightweight deep learning model, MobileNet, is used for extracting biometric features from fingerprint images. These features are then used for transformation and classification. The extracted features represent critical fingerprint patterns like ridges and minutiae.
   </div>
   
 </details>
@@ -105,7 +105,7 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Click to view description</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    The **Hilbert transform** is applied to the extracted fingerprint features to generate an **analytic feature space**. This transform creates a complex representation of the original features by separating magnitude and phase components.
+    The Hilbert transform is applied to the extracted fingerprint features to generate an analytic feature space. This transform creates a complex representation of the original features by separating magnitude and phase components.
   </div>
   
 </details>
@@ -116,23 +116,23 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Click to view description</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    The **phase component** of the analytic features is modulated using a **secret phase key**. This key-dependent modulation ensures that the transformation is **non-invertible**, making it computationally infeasible to recover the original fingerprint features without the key. The transformed features are reconstructed by combining the original magnitude with the modulated phase. The final transformed feature, a real-valued vector, incorporates both the original biometric information (via magnitude) and enhanced security (via phase modulation).
+    The phase component of the analytic features is modulated using a secret phase key. This key-dependent modulation ensures that the transformation is non-invertible, making it computationally infeasible to recover the original fingerprint features without the key. The transformed features are reconstructed by combining the original magnitude with the modulated phase. The final transformed feature, a real-valued vector, incorporates both the original biometric information (via magnitude) and enhanced security (via phase modulation).
   </div>
   
 </details>
 
 ### Classification and Verification
 
-**Task 1**: A **Dense Neural Network** classifier is employed to classify both original and transformed features. The network consists of multiple fully connected layers with **batch normalization**, **dropout**, and **L2 regularization** to prevent overfitting and improve classification accuracy.
+Task 1: A Dense Neural Network classifier is employed to classify both original and transformed features. The network consists of multiple fully connected layers with batch normalization, dropout, and L2 regularization to prevent overfitting and improve classification accuracy.
 
-**Task 2**: Verification using **Mahalanobis Distance** for Real and Query fingerprint.
+Task 2: Verification using Mahalanobis Distance for Real and Query fingerprint.
 
 <details>
   <summary><strong>Click to view details on Classification & Verification</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    Task 1: The **Dense Neural Network** classifier processes both the original and transformed feature vectors. This helps in classifying fingerprints into genuine or altered categories with high accuracy. The network's structure includes fully connected layers that allow it to learn complex patterns in the data, and batch normalization and dropout are applied to reduce overfitting.
-    Task 2: **Mahalanobis Distance** is used to verify whether the **real fingerprint** and **query fingerprint** match. It compares the feature vectors and ensures that the system accurately distinguishes between genuine and forged fingerprints.
+    Task 1: The Dense Neural Network classifier processes both the original and transformed feature vectors. This helps in classifying fingerprints into genuine or altered categories with high accuracy. The network's structure includes fully connected layers that allow it to learn complex patterns in the data, and batch normalization and dropout are applied to reduce overfitting.
+    Task 2: Mahalanobis Distance is used to verify whether the real fingerprint and query fingerprint match. It compares the feature vectors and ensures that the system accurately distinguishes between genuine and forged fingerprints.
   </div>
   
 </details>
@@ -143,8 +143,8 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Click to view details on HillClimbing Attack Testing</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    **Score-Oracle**: It provides a continuous similarity score (higher values indicate a closer match) between the target feature and a generated feature during an attack. The goal is to find a synthetic feature that is as similar as possible to the original target template.
-    **Binary-Oracle**: It gives a binary decision — **match** or **no-match** — based on whether the generated feature is accepted as matching the target feature.
+    Score-Oracle: It provides a continuous similarity score (higher values indicate a closer match) between the target feature and a generated feature during an attack. The goal is to find a synthetic feature that is as similar as possible to the original target template.
+    Binary-Oracle: It gives a binary decision — **match** or **no-match** — based on whether the generated feature is accepted as matching the target feature.
   </div>
   
 </details>
@@ -155,7 +155,7 @@ Execute the notebook cells to run the model training and evaluation.
   <summary><strong>Click to view results</strong></summary>
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
-    The results of the experiments are documented in the respective notebooks. They include performance metrics such as **accuracy**, **ROC**, and **EER**.
+    The results of the experiments are documented in the respective notebooks. They include performance metrics such as accuracy, ROC, and EER.
   </div>
   
 </details>
