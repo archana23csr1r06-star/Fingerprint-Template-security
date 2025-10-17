@@ -23,7 +23,7 @@ This repository contains all scripts required to reproduce the simulation and nu
 • gitbash terminal
 # Installation Prerequisites:
 
-Ensure that you have the following installed:
+# Ensure that you have the following installed:
 Python 3.x
 
 Jupyter Notebook
@@ -52,8 +52,9 @@ Open the desired notebook (e.g.,Fingerprint-Template-security.ipynb).
 
 Execute the notebook cells to run the model training and evaluation.
 
-# The following work flow 
+## The following work flow 
 
+### Description of Proposed Work
 <details>
   <summary><strong>Description of Proposed Work</strong></summary>
   
@@ -66,8 +67,10 @@ Execute the notebook cells to run the model training and evaluation.
 </details>
 
 
-# Dataset
-
+### Dataset
+<details>
+  <summary><strong>Description of Proposed Work</strong></summary>
+  <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
 The datasets used in the experiments are publicly available and can be accessed via the following link:
 
 FVC2002,FVC2004:http://bias.csr.unibo.it/fvc2002/databases.asp
@@ -80,6 +83,9 @@ FVC2004 DB1 Optical Sensor
 FVC2004 DB2 Optical Sensor 
 FVC2004 DB3 Thermal sensor 
 FVC2004 DB4 SFinGe v3.0 
+ </div>
+  
+</details>
 
 # Feature Extraction Using MobileNet:
 
