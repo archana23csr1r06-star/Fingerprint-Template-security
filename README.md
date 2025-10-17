@@ -132,7 +132,6 @@ Execute the notebook cells to run the model training and evaluation.
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
     Task 1: The **Dense Neural Network** classifier processes both the original and transformed feature vectors. This helps in classifying fingerprints into genuine or altered categories with high accuracy. The network's structure includes fully connected layers that allow it to learn complex patterns in the data, and batch normalization and dropout are applied to reduce overfitting.
-    
     Task 2: **Mahalanobis Distance** is used to verify whether the **real fingerprint** and **query fingerprint** match. It compares the feature vectors and ensures that the system accurately distinguishes between genuine and forged fingerprints.
   </div>
   
@@ -145,7 +144,6 @@ Execute the notebook cells to run the model training and evaluation.
   
   <div style="max-height: 200px; overflow-y: auto; padding: 10px;">
     **Score-Oracle**: It provides a continuous similarity score (higher values indicate a closer match) between the target feature and a generated feature during an attack. The goal is to find a synthetic feature that is as similar as possible to the original target template.
-    
     **Binary-Oracle**: It gives a binary decision — **match** or **no-match** — based on whether the generated feature is accepted as matching the target feature.
   </div>
   
