@@ -8,15 +8,14 @@ Authors:
 
 # Included Scripts
 This repository contains all scripts required to reproduce the simulation and numerical results presented in the article.
-| Source code | Figure/Table | description |
-| --- | --- |
-| FVC200220024-classification.ipynb| Figs. Accuracy, Loss, EER are the resultant plots |Interactive python notebook having python code developed for the Classification Task |
 
-| FVC-Verification.ipynb | Figs. ROC, DET are the resultant plots| Interactive python notebook having python code developed for the Verification Task |
-
-| genuine and imposter.ipynb | Figs. Genuine and Imposter Score distribution, FRR/FAR, ROC are the resultant plots| Interactive python notebook having python code developed for Calculating Genuine and Imposter Scores |
-
-| hill climbing attack.ipynb | Figs. ROC,Scorce Oracle, Binary Oracle are the resultant plots | Interactive python notebook having python code developed for the Hill climbing ttack testing  |
+| Source code | Figure/Table | Description |
+|--------------|---------------|--------------|
+| **FVC200220024-classification.ipynb** | Figs. Accuracy, Loss, EER are the resultant plots | Interactive Python notebook containing code for the **Classification Task** |
+| **FVC-Verification.ipynb** | Figs. ROC, DET are the resultant plots | Interactive Python notebook containing code for the **Verification Task** |
+| **genuine and imposter.ipynb** | Figs. Genuine and Imposter Score Distribution, FRR/FAR, ROC are the resultant plots | Interactive Python notebook containing code for **Calculating Genuine and Imposter Scores** |
+| **hill climbing attack.ipynb** | Figs. ROC, Score Oracle, Binary Oracle are the resultant plots | Interactive Python notebook containing code for **Hill-Climbing Attack Testing** |
+| **record multiplicity + oracle attack.ipynb** | Figs. ROC, DET are the resultant plots with AUC = 0.9997 and EER = 0.0115 | Interactive Python notebook containing code for **Record Multiplicity + Oracle Attack Evaluation** using ISO/IEC-style metrics |
 
 
 # Requirements:
